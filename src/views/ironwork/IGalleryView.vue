@@ -1,17 +1,16 @@
 <script>
-// components end
 export default {
   data() {
     return {
             navItems: [
-        { name: 'Ana Səhifə', link: '/' },
-        { name: 'Məhsullar', link: '/products' },
-        { name: 'Galereya', link: '/gallery' },
+        { name: 'Ana Səhifə', link: '/ironwork' },
+        { name: 'Məhsullar', link: '/ironwork/products' },
+        { name: 'Galereya', link: '/ironwork/gallery' },
         { name: 'Haqqımızda', link: '/about' },
         { name: 'Əlaqə', link: '/contact' }
       ],
 
-      logoHeader: `../public/loginBack.jpeg`,
+      logoHeader: `../../public/loginBack.jpeg`,
       aboutImage: `https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80`,
     }
   }
@@ -70,77 +69,57 @@ export default {
   </div>
   </header>
   <!-- header end -->
-  <!--  about header start -->
-  <div class="w-full h-[45vh]  flex flex-center shadow-md" id="about_header">
+  <!--  gallery header start -->
+  <div class="w-full h-[45vh] flex flex-center shadow-md" id="gallery_header">
     <div id="overlay" class="w-full h-[45vh] bg-transparan absolute"></div>
-    <h1 class="text-4xl font-bold text-second z-10">Anproduction Haqqında</h1>
+    <h1 class="text-4xl font-bold text-second z-10">Anproduction Galereya</h1>
   </div>
-  <!--  about header end -->
-  <!--  about section start -->
-  <section class="relative pt-12 bg-second">
-    <div class="items-center flex flex-wrap">
-      <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
-        <img alt="..." class="max-w-full rounded-lg shadow-lg" :src="aboutImage" />
+  <!--  gallery header end -->
+  <!--  gallery start-->
+  <div class="container mx-auto">
+    <div
+      class="grid-cols-3 p-20 space-y-2 bg-yellow-200 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3"
+    >
+      <div id="content_img" class="w-full rounded">
+        <img
+          src="https://imgs.search.brave.com/b82Vv3A8-trYfttGzbVKu2J3gt5K1o3GogRnvOTdtmc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdDIu/ZGVwb3NpdHBob3Rv/cy5jb20vMzIyNjMz/My83NTg2L2kvNjAw/L2RlcG9zaXRwaG90/b3NfNzU4Njg1MjUt/c3RvY2stcGhvdG8t/d3JvdWdodC1pcm9u/LmpwZw"
+          alt="image"
+        />
       </div>
-      <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
-        <div class="md:pr-12">
-          <div
-            class="text-second p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full text-xl bg-primary mt-8"
-          >
-            <ion-icon name="construct"></ion-icon>
-          </div>
-          <h3 class="text-3xl font-semibold">Anproduction</h3>
-          <p class="mt-4 text-lg leading-relaxed text-primary">
-            Biz Anproduction Şirkəti Sizin Üçün İstədiyiniz Dizayn Və Materialda Metal
-            Konstruksiyalar Və Ya Mebellər Hazırlayırıq.
-          </p>
-          <ul class="list-none mt-6">
-            <li class="py-2">
-              <div class="flex items-center">
-                <div>
-                  <span
-                    class="font-semibold inline-block py-1 px-2 uppercase rounded-full text-second bg-primary text-xl flex flex-center mr-3"
-                    ><ion-icon name="checkmark"></ion-icon
-                  ></span>
-                </div>
-                <div>
-                  <h4 class="text-primary">Keyfiyyətli Material</h4>
-                </div>
-              </div>
-            </li>
-            <li class="py-2">
-              <div class="flex items-center">
-                <div>
-                  <span
-                    class="text-xl flex flex-center font-semibold inline-block py-1 px-2 uppercase rounded-full text-second bg-primary mr-3"
-                    ><ion-icon name="checkmark"></ion-icon
-                  ></span>
-                </div>
-                <div>
-                  <h4 class="text-primary">Markanız Üçün Xüsusi Dizayn</h4>
-                </div>
-              </div>
-            </li>
-            <li class="py-2">
-              <div class="flex items-center">
-                <div>
-                  <span
-                    class="text-xl flex flex-center font-semibold inline-block py-1 px-2 uppercase rounded-full text-second bg-primary mr-3"
-                    ><ion-icon name="checkmark"></ion-icon
-                  ></span>
-                </div>
-                <div>
-                  <h4 class="text-primary">Tam Zamanlı Xidmət</h4>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <div id="content_img" class="w-full col-span-2 row-span-2 rounded">
+        <img
+          src="https://imgs.search.brave.com/9cuPrgM8WRfHID9V9bNab6AjUlLVoEOaMuj6LvY6sMo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9maW5l/aXJvbi5jby51ay93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMy8w/Mi9HZW9yZ2lhbi1X/cm91Z2h0LUlyb24u/anBn"
+          alt="image"
+        />
+      </div>
+      <div id="content_img" class="w-full rounded">
+        <img
+          src="https://imgs.search.brave.com/RXeobw8J2NBA9bi_unHMskpO2wpCx7eTvd6UduOzTpQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzcwLzk3LzA5/LzM2MF9GXzE3MDk3/MDk0MF9kSUtUNjFU/U0VvRHBJTzRTd0l1/YWZiY3lrMU1qRTJB/aC5qcGc"
+          alt="image"
+        />
+      </div>
+      <div id="content_img" class="w-full rounded">
+        <img
+          src="https://imgs.search.brave.com/ZIjifJ9aEgxTuqpDZIiHXqtJqxkEqKNzI2ADDSGEQ3A/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9rZXJ2/aW5zaXJvbndvcmtz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMi8wMi9NZXNo/LUhvbWUtcGFnZS5q/cGc"
+          alt="image"
+        />
+      </div>
+      <div id="content_img" class="w-full rounded">
+        <img
+          src="https://imgs.search.brave.com/NZtkDLkSEbVy8khyHPJwDBqe75QhIYi0ENNPrjmIiEI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly94dHJl/bWVpcm9ud29yay5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjAvMDYveHRyZW1l/LWlyb24td29yay1j/b3JlbWVkaWEtcGhv/dG9ncmFwaHlfd2Vi/LXJhaWwtaXJvbi1p/bnRlcmlvci1iYWxj/b255LmpwZw"
+          alt="image"
+        />
+      </div>
+      <div id="content_img" class="w-full rounded">
+        <img
+          src="https://imgs.search.brave.com/pq4Wn4bdLQ6sCuc-nY0XPIVY8pOh0ukDTOLe2ZPdu2k/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxMy8w/NS8zMC8xNi8xNC9t/ZWNoYW5pY3MtMTE0/NzIwXzY0MC5qcGc"
+          alt="image"
+        />
       </div>
     </div>
-  </section>
-  <!--  about section end -->
-  <!-- footer start -->
+  </div>
+  <!--  gallery end -->
+    <!-- footer start -->
   <footer class="bg-second">
     <div class="container px-6 py-12 mx-auto">
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
@@ -229,10 +208,14 @@ export default {
   </footer>
   <!-- footer end  -->
 </template>
-<style lang="less">
-@import '../assets/less/base';
-#about_header {
-  background-image: @aboutHeader;
-}
 
+<style lang="less">
+@import '../../assets/less/base';
+#content_img:hover {
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+#gallery_header {
+  background-image: @galleryHeader;
+}
 </style>
