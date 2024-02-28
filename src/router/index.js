@@ -1,13 +1,28 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/furniture/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/furniture',
-      name: 'home',
+      name: 'furniture',
       component: HomeView
+    },
+    {
+      path: '/ironwork',
+      name: 'ironwork',
+      component: () => import('../views/ironwork/HomeView.vue')
+    },
+        {
+      path: '/ironwork/products',
+      name: 'ironworkproducts',
+      component: () => import('../views/ironwork/IProductView.vue')
+    },
+    {
+      path: '/ironwork/gallery',
+      name: 'ironworkgallery',
+      component: () => import('../views/ironwork/IGalleryView.vue')
     },
     {
       path: '/about',
@@ -20,14 +35,14 @@ const router = createRouter({
       component: () => import('../views/ContactView.vue')
     },
     {
-      path: '/products',
+      path: '/furniture/products',
       name: 'products',
-      component: () => import('../views/ProductView.vue')
+      component: () => import('../views/furniture/ProductView.vue')
     },
     {
-      path: '/gallery',
+      path: '/furniture/gallery',
       name: 'gallery',
-      component: () => import('../views/GalleryView.vue')
+      component: () => import('../views/furniture/GalleryView.vue')
     },
     {
       path: '/',
